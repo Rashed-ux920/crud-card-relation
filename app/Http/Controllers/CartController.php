@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\product;
+use App\Models\cart;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('product');
+        return view('cart');
     }
 
     /**
@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('addproduct');
+        //
     }
 
     /**
@@ -28,21 +28,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new product;
-
-        $product->name = $request->name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-
-        $product->save();
-
-        return to_route('market');
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(product $product)
+    public function show(cart $cart)
     {
         //
     }
@@ -50,7 +42,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(product $product)
+    public function edit(cart $cart)
     {
         //
     }
@@ -58,7 +50,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, product $product)
+    public function update(Request $request, cart $cart)
     {
         //
     }
@@ -66,7 +58,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(product $product)
+    public function destroy(cart $cart)
     {
         //
     }
